@@ -1,25 +1,26 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var session = require('express-session');
-var passport = require('passport');
-var expressValidator = require('express-validator');
-var LocalStrategy = require('passport-local').Strategy;
-var multer = require('multer');
-var upload = multer({ dest: './uploads' });
-var flash = require('connect-flash');
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const passport = require('passport');
+const expressValidator = require('express-validator');
+const LocalStrategy = require('passport-local').Strategy;
+const multer = require('multer');
 
-var db = mongoose.connection;
+const upload = multer({ dest: './uploads' });
+const flash = require('connect-flash');
+const mongo = require('mongodb');
+const mongoose = require('mongoose');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+const db = mongoose.connection;
 
-var app = express();
+const index = require('./routes/index');
+const users = require('./routes/users');
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
