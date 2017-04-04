@@ -6,12 +6,13 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const passport = require('passport');
-const expressValidator = require('express-validator');
 const LocalStrategy = require('passport-local').Strategy;
+const expressValidator = require('express-validator');
 const multer = require('multer');
 
 const upload = multer({ dest: './uploads' });
 const flash = require('connect-flash');
+const bcrypt = require('bcryptjs');
 const mongo = require('mongodb');
 const mongoose = require('mongoose');
 
